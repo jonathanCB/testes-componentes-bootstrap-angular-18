@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="row mt-5 justify-content-center align-items-center g-2">
+    <!-- <div class="col">
+      <button type="button" class="btn btn-primary">Primary</button>
+    </div>
+    <div class="col">
+      <button type="button" class="btn btn-secondary">Secondary</button>
+    </div>
+    <div class="col">
+      <button type="button" class="btn btn-success">Success</button>
+    </div>
+    <div class="col">
+      <button type="button" class="btn btn-danger">Danger</button>
+    </div>
+    <div class="col">
+      <button type="button" class="btn btn-warning">Warning</button>
+    </div>
+    <div class="col">
+      <button type="button" class="btn btn-info">Info</button>
+    </div>
+    <div class="col">
+      <button type="button" class="btn btn-light">Light</button>
+    </div>
+    <div class="col">
+      <button type="button" class="btn btn-dark">Dark</button>
+    </div> -->
+    <div class="col">
+      <app-custom-button label="Teste" cssClass="btn-info" (btnClicked)="customButtomClicked($event)"></app-custom-button>
+    </div>
+    <div class="col align-items-center">
+      <app-custom-input type="text" [formControl]="fc"></app-custom-input>
+    </div>
+  </div>
+</div>
