@@ -1,44 +1,40 @@
-<div class="container">
-  @if(topLabel()) {
-  <label [for]="id()" class="form-label">Email address</label>
-  <input
-    class="form-control"
-    [id]="id()"
-    [formControl]="formControl()"
-    [type]="type()"
-    [placeholder]="placeholder()"
-    [ariaLabel]="ariaLabel()"
-    [ariaDescription]="ariaDescription()"
-  />
-  }@else if (leftLabel()) {
-  <div class="row align-items-center">
-    <div class="col-auto">
-      <label [for]="id()" class="form-label"
-        >Email address</label
-      >
-    </div>
-    <div class="col">
-      <input
-        class="form-control"+
-        
-        [id]="id()"
-        [formControl]="formControl()"
-        [type]="type()"
-        [placeholder]="placeholder()"
-        [ariaLabel]="ariaLabel()"
-        [ariaDescription]="ariaDescription()"
-      />
-    </div>
+@if(topLabel()) {
+<label [for]="id()" class="form-label">{{ topLabel() }}</label>
+<input
+  class="form-control"
+  [id]="id()"
+  [formControl]="formControl()"
+  [type]="type()"
+  [placeholder]="placeholder()"
+  [ariaLabel]="ariaLabel()"
+  [ariaDescription]="ariaDescription()"
+/>
+}@else if (leftLabel()) {
+<div class="row align-items-center">
+  <div class="col-auto">
+    <label [for]="id()" class="form-label">{{ leftLabel() }}</label>
   </div>
-  } @else {
-  <input
-    class="form-control"
-    [id]="id()"
-    [formControl]="formControl()"
-    [type]="type()"
-    [placeholder]="placeholder()"
-    [ariaLabel]="ariaLabel()"
-    [ariaDescription]="ariaDescription()"
-  />
-  }
+  <div class="col">
+    <input
+      class="form-control"
+      +
+      [id]="id()"
+      [formControl]="formControl()"
+      [type]="type()"
+      [placeholder]="placeholder()"
+      [ariaLabel]="ariaLabel()"
+      [ariaDescription]="ariaDescription()"
+    />
+  </div>
 </div>
+} @else {
+<input
+  class="form-control"
+  [id]="id()"
+  [formControl]="formControl()"
+  [type]="type()"
+  [placeholder]="placeholder()"
+  [ariaLabel]="ariaLabel()"
+  [ariaDescription]="ariaDescription()"
+/>
+}

@@ -13,7 +13,7 @@ export class CustomInputComponent {
   id = input<string>();
   placeholder = input<string>('');
   formControl = input.required<any>();
-  topLabel = input<string>();
+  topLabel = input<string>('asd');
   leftLabel = input<string>();
   ariaLabel = input<string>();
   ariaDescription = input<string>();
